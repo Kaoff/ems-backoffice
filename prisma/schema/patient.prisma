@@ -1,0 +1,16 @@
+model Patient {
+    id              Int             @id @default(autoincrement())
+    uuid            String          @unique @default(uuid())
+    firstname       String
+    lastname        String
+    phone           String
+    vitalCardNumber Int
+    dateOfBirth     DateTime
+    invoices        Invoice[]
+    isLSPD          Boolean
+    lspdNumber      Int?
+    surgeryReports  SurgeryReport[]
+    reports         Report[]
+    MotherToBirthReport BirthReport[] @relation("MotherToBirthReport")
+    FatherToBirthReport BirthReport[] @relation("FatherToBirthReport")
+}

@@ -1,0 +1,28 @@
+enum InvoiceStatus {
+    UNPAID
+    PAID
+    PARTIALLY_PAID
+    LSPD
+
+    @@map("invoice_status")
+}
+
+model Invoice {
+    id              Int             @id @default(autoincrement())
+    uuid            String          @unique @default(uuid())
+    patient         Patient         @relation(fields: [patientUuid], references: [uuid])
+    patientUuid     String
+    date            DateTime
+    amount          Float
+    description     String
+    status          InvoiceStatus   @default(UNPAID)
+    details         InvoiceDetail[]
+    paidAt          DateTime?
+    createdAt       DateTime        @default(now())
+    updatedAt       DateTime        @updatedAt
+    Report          Report?
+    SurgeryReport   SurgeryReport?
+    BirthReport     BirthReport?
+    surgeryReportId Int?
+    birthReportId   Int?
+}

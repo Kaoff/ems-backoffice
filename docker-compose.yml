@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+
+  db:
+    image: postgres
+    volumes:
+      - /private/var/lib/postgresql:/var/lib/postgresql
+    ports:
+      - "5444:5432"
+    environment:
+      POSTGRES_USER: emsdev
+      POSTGRES_DB: ems
+      POSTGRES_PASSWORD: emsdev
+
+  adminer:
+    image: adminer
+    depends_on: 
+      - db
+    ports:
+      - 8082:8080

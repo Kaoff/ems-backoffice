@@ -1,0 +1,14 @@
+model Report {
+    id            Int         @id @default(autoincrement())
+    uuid          String      @unique @default(uuid())
+    patient       Patient     @relation(fields: [patientUuid], references: [uuid])
+    patientUuid   String
+    date          DateTime
+    personnels    Personnel[]
+    reasonOfVisit String
+    careDetails   String
+    createdAt     DateTime    @default(now())
+    updatedAt     DateTime    @updatedAt
+    invoice       Invoice     @relation(fields: [invoiceUuid], references: [uuid])
+    invoiceUuid   String      @unique
+}

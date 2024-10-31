@@ -1,0 +1,28 @@
+export const colors = [
+	"primary",
+	"secondary",
+	"base",
+	"slate",
+	"gray",
+	"red",
+	"green",
+	"blue",
+	"indigo",
+	"purple",
+	"pink",
+	"lime",
+	"yellow",
+	"amber",
+	"orange",
+	"teal",
+	"cyan",
+	"white",
+	"black",
+	"sky",
+	"emerald",
+	"violet",
+	"fuchsia",
+	"rose",
+];
+
+export type Color = (typeof colors)[number];

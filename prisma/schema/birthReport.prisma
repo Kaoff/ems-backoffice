@@ -1,0 +1,27 @@
+model BirthReport {
+    id                 Int         @id @default(autoincrement())
+    uuid               String      @unique @default(uuid())
+    mother             Patient     @relation(name: "MotherToBirthReport", fields: [motherUuid], references: [uuid])
+    motherUuid         String
+    father             Patient     @relation(name: "FatherToBirthReport", fields: [fatherUuid], references: [uuid])
+    fatherUuid         String
+    conceptionDate     DateTime
+    birthDay           DateTime
+    durationOfBirth    Int
+    birthType          String
+    perineotomy        String
+    anestheticType     String
+    babyWeight         Float
+    babyHeight         Float
+    firstMinApgarScore Int
+    fifthMinApgarScore Int
+    complications      String?
+    details            String?
+    personnels         Personnel[]
+    reasonOfVisit      String
+    careDetails        String
+    createdAt          DateTime    @default(now())
+    updatedAt          DateTime    @updatedAt
+    Invoice            Invoice     @relation(fields: [invoiceUuid], references: [uuid])
+    invoiceUuid        String      @unique
+}
