@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { superForm } from "sveltekit-superforms";
-  import type { PageData } from "./$types";
-  import { NEW_PATIENT_MODAL_ID } from "./const";
+import { superForm } from "sveltekit-superforms";
+import type { PageData } from "./$types";
+import { NEW_PATIENT_MODAL_ID } from "./const";
 
-  const { form: propForm }: { form: PageData["form"] } = $props();
-  const { form, errors, enhance, delayed } = superForm(propForm);
+const { form: propForm }: { form: PageData["form"] } = $props();
+const { form, errors, enhance, delayed } = superForm(propForm);
 </script>
 
 <input type="checkbox" id={NEW_PATIENT_MODAL_ID} class="modal-toggle" />

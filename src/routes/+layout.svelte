@@ -1,7 +1,7 @@
 <script>
-    import "../app.css";
+import "../app.css";
 
-    const { children } = $props();
+const { children } = $props();
 </script>
 
 <div class="with-background h-svh">

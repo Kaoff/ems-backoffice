@@ -1,7 +1,7 @@
 <script lang="ts">
-    import "iconify-icon";
+import "iconify-icon";
 
-    const { data } = $props();
+const { data } = $props();
 </script>
 
 <div class="flex justify-between items-center w-full">

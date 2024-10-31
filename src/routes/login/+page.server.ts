@@ -1,9 +1,9 @@
-import type { PageServerLoad } from "../$types";
-import { redirect } from "@sveltejs/kit";
-import type { RequestEvent } from "./$types";
-import prisma from "$lib/prisma";
-import { createSession, generateSessionToken } from "$lib/api/sessions";
 import { setSessionTokenCookie } from "$lib/api/cookies";
+import { createSession, generateSessionToken } from "$lib/api/sessions";
+import prisma from "$lib/prisma";
+import { redirect } from "@sveltejs/kit";
+import type { PageServerLoad } from "../$types";
+import type { RequestEvent } from "./$types";
 
 export const load: PageServerLoad = async (event) => {
 	if (event.locals.session !== null && event.locals.personnel !== null) {
@@ -61,4 +61,3 @@ const login = async (event: RequestEvent) => {
 export const actions = {
 	login,
 };
-

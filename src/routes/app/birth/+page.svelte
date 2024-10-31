@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "iconify-icon";
+import "iconify-icon";
 </script>
 
 <div class="flex justify-between items-center w-full">

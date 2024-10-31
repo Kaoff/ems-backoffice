@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Logo from '$lib/components/Logo.svelte';
+import Logo from "$lib/components/Logo.svelte";
 
-  const { data } = $props();
+const { data } = $props();
 </script>
 
 <div

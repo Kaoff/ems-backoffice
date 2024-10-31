@@ -1,9 +1,9 @@
+import { patientSchema } from "$lib/forms/patient";
 import prisma from "$lib/prisma";
 import { redirect } from "@sveltejs/kit";
-import type { PageServerLoad, RequestEvent } from "./$types";
 import { superValidate } from "sveltekit-superforms";
 import { zod } from "sveltekit-superforms/adapters";
-import { patientSchema } from "$lib/forms/patient";
+import type { PageServerLoad, RequestEvent } from "./$types";
 
 const addPatient = async ({ request }: RequestEvent) => {
 	const form = await superValidate(request, zod(patientSchema));

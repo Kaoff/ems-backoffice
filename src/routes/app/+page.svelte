@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { apps } from '$lib/apps';
-  import AppIcon from "$lib/components/AppIcon/AppIcon.svelte";
+import { apps } from "$lib/apps";
+import AppIcon from "$lib/components/AppIcon/AppIcon.svelte";
 </script>
 
 <div

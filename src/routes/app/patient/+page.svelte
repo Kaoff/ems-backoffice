@@ -1,33 +1,33 @@
 <script lang="ts">
-  import "iconify-icon";
-  import NewPatientModal from "./NewPatientModal.svelte";
-  import { NEW_PATIENT_MODAL_ID } from "./const";
-  import Time from "svelte-time/Time.svelte";
-  import { browser } from "$app/environment";
+import "iconify-icon";
+import { browser } from "$app/environment";
+import Time from "svelte-time/Time.svelte";
+import NewPatientModal from "./NewPatientModal.svelte";
+import { NEW_PATIENT_MODAL_ID } from "./const";
 
-  // const mockedPatients: Prisma.PatientCreateInput[] = [
-  //   {
-  //     uuid: "1",
-  //     isLSPD: false,
-  //     firstname: "John",
-  //     lastname: "Doe",
-  //     dateOfBirth: new Date("2000-01-01"),
-  //     vitalCardNumber: 12345,
-  //     phone: "555-555-5555",
-  //   },
-  //   {
-  //     uuid: "2",
-  //     isLSPD: true,
-  //     firstname: "Jane",
-  //     lastname: "Doe",
-  //     dateOfBirth: new Date("2000-01-01"),
-  //     vitalCardNumber: 12346,
-  //     phone: "777-777-7777",
-  //     lspdNumber: 12,
-  //   },
-  // ];
+// const mockedPatients: Prisma.PatientCreateInput[] = [
+//   {
+//     uuid: "1",
+//     isLSPD: false,
+//     firstname: "John",
+//     lastname: "Doe",
+//     dateOfBirth: new Date("2000-01-01"),
+//     vitalCardNumber: 12345,
+//     phone: "555-555-5555",
+//   },
+//   {
+//     uuid: "2",
+//     isLSPD: true,
+//     firstname: "Jane",
+//     lastname: "Doe",
+//     dateOfBirth: new Date("2000-01-01"),
+//     vitalCardNumber: 12346,
+//     phone: "777-777-7777",
+//     lspdNumber: 12,
+//   },
+// ];
 
-  const { data } = $props();
+const { data } = $props();
 </script>
 
 <div class="flex flex-col gap-4">

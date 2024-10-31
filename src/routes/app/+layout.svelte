@@ -1,23 +1,23 @@
 <script lang="ts">
-    import AppIcon from '$lib/components/AppIcon/AppIcon.svelte';
-    import Logo from "$lib/components/Logo.svelte";
-    import Time, { dayjs } from "svelte-time";
-    import "dayjs/locale/fr";
-    import { apps } from '$lib/apps';
+import AppIcon from "$lib/components/AppIcon/AppIcon.svelte";
+import Logo from "$lib/components/Logo.svelte";
+import Time, { dayjs } from "svelte-time";
+import "dayjs/locale/fr";
+import { apps } from "$lib/apps";
 
-    dayjs.locale("fr");
-    let date = $state(new Date());
+dayjs.locale("fr");
+let date = $state(new Date());
 
-    $effect(() => {
-        const interval = setInterval(() => {
-            date = new Date();
-        }, 1000);
+$effect(() => {
+	const interval = setInterval(() => {
+		date = new Date();
+	}, 1000);
 
-        return () => clearInterval(interval);
-    })
+	return () => clearInterval(interval);
+});
 
-    const { data, children } = $props();
-  </script>
+const { data, children } = $props();
+</script>
   
   <div class="container mx-auto h-full p-4 flex flex-col">
     <div class="flex gap-4 items-center">
